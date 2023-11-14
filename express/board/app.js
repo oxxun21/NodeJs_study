@@ -26,10 +26,6 @@ app.get("/detail/:id", (req, res) => {
 
 let collection;
 app.listen(3000, async () => {
-  console.log("server started");
   const mongoClient = await mongodbConnection();
   collection = mongoClient.db().collection("post");
-  console.log("mongo connected");
 });
-
-app.listen(3000);
